@@ -24,7 +24,8 @@ const HomePage = () => {
 
     return (
         <div>
-            <div id='navbar'>
+            <div id="background" className={menuOn ? "blur" : "unblur"}></div>
+            <div id="navbar">
                 {menuOn && (<ul ref = {menuRef} className="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
@@ -44,12 +45,12 @@ const HomePage = () => {
                     <img src={logo} alt="Website logo" />
                 </div>
             </div>
-            <div id='content' className={menuOn ? "blur" : "unblur"}>
-                <div className='openingimage'>
-
+            <div id="content" className={menuOn ? "blur" : "unblur"}>
+                <div className="openingImage">
+                    <p>Look at my awesome website!!</p>
                 </div>
                 <div className='about'>
-
+                    <p>more testing text</p>
                 </div>
             </div>
         </div>
