@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from "react";
-import './style.css';
-import logo from '../images/logo.png';
-import photo from '../images/photo.png'
+import '../style.css';
+import logo from '../../images/logo.png';
+import photo from '../../images/photo.png'
 
 const HomePage = () => {
     const [menuOn, setMenu] = useState(false);
@@ -46,8 +46,8 @@ const HomePage = () => {
                     <img src={logo} alt="Website logo" />
                 </div>
             </div>
-            <div id="content" className={menuOn ? "blur" : "unblur"}>
-                <div className="openingImage">
+            <div id="content" className={`fade1 ${menuOn ? "blur" : "unblur"}`}>
+                <div className="openingImage fade1 fade2">
                     <p>Look at my awesome website!!</p>
                     <img src={photo} alt="Peter Buddendeck" width="25%" height ="25%"/>
                 </div>

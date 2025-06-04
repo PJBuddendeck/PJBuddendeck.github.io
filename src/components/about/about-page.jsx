@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useRef} from "react";
-import './style.css';
-import logo from '../images/logo.png';
+import '../style.css';
+import logo from '../../images/logo.png';
 
-const HobbiesPage = () => {
+const AboutPage = () => {
     const [menuOn, setMenu] = useState(false);
     const menuRef = useRef(null);
     
@@ -52,4 +52,4 @@ const HobbiesPage = () => {
     );
 };
 
-export default HobbiesPage;
+export default AboutPage;
