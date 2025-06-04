@@ -1,6 +1,11 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/home-page'; // Start page
+import HomePage from './components/home-page';
+import AboutPage from './components/about-page';
+import ProjectsPage from './components/projects-page';
+import HobbiesPage from './components/hobbies-page';
+import ContactPage from './components/contact-page';
+import NotFound from './components/errors/not-found'
 
 /*function App() {
   return (
@@ -28,6 +33,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/hobbies" element={<HobbiesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

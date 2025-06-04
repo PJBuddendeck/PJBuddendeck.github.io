@@ -5,7 +5,7 @@
 
 body {
     min-width: 100px;
-    min-height: 100px;
+    min-height: 200px;
 }
 
 .blur {
@@ -120,8 +120,13 @@ body {
     width: 100%;
 }
 
+@media(max-width: 750px){
+    .hideNavbar {
+        display: none;
+    }
+}
+
 #content {
     position: relative;
     padding-top: 50px;
-    z-index: 998 !important;
 }
