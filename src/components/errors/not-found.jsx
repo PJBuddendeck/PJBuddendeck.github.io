@@ -7,7 +7,7 @@ const NotFound = () => {
             <div id="err-background"></div>
             <div id="err-content">
                 <h1>Error 404</h1>
-                <p>The page you are trying to reach is unavailable. Please click <a href="/">this link</a> to return to the home page.</p>
+                <p>The page you are trying to reach is unavailable. Please click <a href="/">this link</a> to return to Peter Buddendeck's home page.</p>
             </div>
         </div>
     );
