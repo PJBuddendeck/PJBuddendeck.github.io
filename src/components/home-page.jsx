@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import './style.css';
-import logo from '../images/logo.png'
+import logo from '../images/logo.png';
 
 const HomePage = () => {
     const [menuOn, setMenu] = useState(false);
