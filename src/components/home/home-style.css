@@ -1,0 +1,15 @@
+.openingImage {
+    width: auto;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openingImage h1 {
+    font-size: 64px;
+    width: 800px;
+    padding-right: 20px;
+    text-align: right;
+}

@@ -33,7 +33,7 @@ const AboutPage = () => {
                     <li><a href="/hobbies">Hobbies</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>)}
-                <div className={menuOn ? "blur" : "unblur"}>
+                <div id="inner-nav" className={menuOn ? "blur" : "unblur"}>
                     <ul>
                         <li onClick={toggleMenu}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
                         <li className="hideNavbar"><a href="/">Home</a></li>
