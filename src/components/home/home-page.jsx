@@ -49,11 +49,11 @@ const HomePage = () => {
             </div>
             <div id="content" className={`fade1 ${menuOn ? "blur" : "unblur"}`}>
                 <div className="openingImage">
-                    <h1>Welcome to the official website of Peter Buddendeck!</h1>
-                    <img className="fade1 fade2" src={photo} alt="Peter Buddendeck" width="329.55px" height ="435.913px"/>
+                    <img className="fade1 fade2" src={photo} alt="Peter Buddendeck" width="389.55px" height ="495.913px"/>
+                    <h1>P<span className="yellow-text">ositive</span><br />J<span className="yellow-text">udicious</span><br />B<span className="yellow-text">right</span></h1>
                 </div>
-                <div className='about'>
-                    <p>We are making progress</p>
+                <div className='about fade1 fade2 fade3'>
+                    <p>Welcome to the official website of Peter J. Buddendeck. Thank you for visiting! Please use the navigation bar at the top of your screen to learn more about my background, interests, and experience.</p>
                 </div>
             </div>
         </div>

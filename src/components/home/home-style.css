@@ -8,8 +8,49 @@
 }
 
 .openingImage h1 {
-    font-size: 64px;
-    width: 800px;
-    padding-right: 20px;
-    text-align: right;
+    font-size: 112px;
+    width: auto;
+    padding-left: 40px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.openingImage img {
+    padding-right: 40px;
+    margin-left: 20px;
+}
+
+.yellow-text {
+    color: #FFAB40;
+    font-style: italic;
+    font-size: 96px;
+}
+
+.about {
+    width: auto;
+    padding-top: 2%;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .openingImage{
+        display:block;
+        padding: 0px;
+        width: 100%;
+        margin: 0px;
+    }
+    .openingImage h1{
+        text-align: center;
+        padding: 0px;
+        margin-right: 0px;
+    }
+    .openingImage img{
+        padding: 0px;
+        margin-left: 0px;
+    }
 }
