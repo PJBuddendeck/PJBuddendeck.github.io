@@ -11,19 +11,32 @@
     font-size: 112px;
     width: auto;
     padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
     margin-right: 20px;
     text-align: left;
+    background-color: rgba(85, 85, 85, 0.5);
+    border: 5px solid #222222;
+    border-radius: 50px;
 }
 
 .openingImage img {
-    padding-right: 40px;
+    padding-right: 80px;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .yellow-text {
     color: #FFAB40;
     font-style: italic;
     font-size: 96px;
+}
+
+p {
+    padding: 15px;
+    background-color: rgba(85, 85, 85, 0.5);
+    border: 3px solid #222222;
+    border-radius: 50px;
 }
 
 .about {
@@ -35,9 +48,10 @@
     margin: auto;
     font-size: 15px;
     padding-bottom: 10px;
+    font-weight: 500;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .openingImage{
         display:block;
         padding: 0px;
