@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
+import './about-style.css'
 import logo from '../../images/logo.png';
 
 const AboutPage = () => {
@@ -46,7 +47,9 @@ const AboutPage = () => {
                 </div>
             </div>
             <div id="content" className={menuOn ? "blur" : "unblur"}>
-                <h1>This page is under construction!</h1>
+                <div id="backdrop">
+                    <h1>This page is under construction!</h1>
+                </div>
             </div>
         </div>
     );

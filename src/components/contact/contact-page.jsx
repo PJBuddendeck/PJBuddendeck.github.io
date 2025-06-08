@@ -46,7 +46,9 @@ const ContactPage = () => {
                 </div>
             </div>
             <div id="content" className={menuOn ? "blur" : "unblur"}>
-                <h1>This page is under construction!</h1>
+                <div id="backdrop">
+                    <h1>This page is under construction!</h1>
+                </div>
             </div>
         </div>
     );

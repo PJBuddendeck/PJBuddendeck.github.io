@@ -131,11 +131,25 @@ body {
     .hideNavbar {
         display: none;
     }
+    #backdrop {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 #content {
     position: relative;
     margin-top: 50px;
+}
+
+#backdrop {
+    color: #222222;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 100vh;
 }
 
 .fade1 {
