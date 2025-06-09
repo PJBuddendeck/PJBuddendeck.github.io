@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
 import './contact-style.css';
 import logo from '../../images/logo.png';
-import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const ContactPage = () => {
     const [menuOn, setMenu] = useState(false);
@@ -78,7 +78,7 @@ const ContactPage = () => {
             </div>
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
-                    <div id='contact-form'>
+                    <div id='contact-form' className="fade1">
                         {showSuccess && (<div id='form-success' ref={succRef}>
                             The form has been successfully submitted!
                         </div>)}
@@ -98,10 +98,11 @@ const ContactPage = () => {
                             </div>
                         </form>
                     </div>
-                    <div id='platforms'>
+                    <div id='platforms' className="fade1 fade2">
                         <h3>Additionally, you can find me on the following platforms:</h3>
                         <ul>
                             <li><a href="https://www.linkedin.com/in/peter-buddendeck-9a538a345/" rel="noreferrer" target="_blank"><FaLinkedin /></a></li>
+                            <li><a href="https://github.com/PJBuddendeck" rel="noreferrer" target="_blank"><FaGithub /></a></li>
                             <li><a href="https://www.instagram.com/peterb_8/" rel="noreferrer" target="_blank"><FaInstagram /></a></li>
                             <li><a href="https://www.facebook.com/people/Peter-Buddendeck/pfbid0H8k3ujec4X9Su2eVLFPUfgqqMC59mEZqNvx9q88qi76uZCJqkmJHfgsiSbKbG1EUl/" rel="noreferrer" target="_blank"><FaFacebook /></a></li>
                         </ul>

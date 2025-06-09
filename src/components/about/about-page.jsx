@@ -50,7 +50,8 @@ const AboutPage = () => {
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <h1>This page is under construction!</h1>
-                    <a href={resume} download="Peter Buddendeck Resume">Download Resume</a>
+                    <h4>Please come back later to learn more about my early life, education, and work experiences.</h4>
+                    <a href={resume} download="Peter Buddendeck Resume">Click Here to Download my Resume</a>
                 </div>
             </div>
         </div>

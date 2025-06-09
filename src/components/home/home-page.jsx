@@ -49,7 +49,7 @@ const HomePage = () => {
             </div>
             <div id="content" className={`fade1 ${menuOn ? "blur" : "unblur"}`}>
                 <div className="openingImage">
-                    <img className="fade1 fade2" src={photo} alt="Peter Buddendeck" width="389.55px" height ="495.913px"/>
+                    <img className="fade1 fade2" src={photo} alt="Peter Buddendeck" width="386" height ="491px"/>
                     <h1>P<span className="yellow-text">ositive</span><br />J<span className="yellow-text">udicious</span><br />B<span className="yellow-text">right</span></h1>
                 </div>
                 <div className='about fade1 fade2 fade3'>

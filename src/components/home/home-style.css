@@ -1,6 +1,6 @@
 .openingImage {
     width: auto;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -40,7 +40,6 @@
 
 .about {
     width: auto;
-    padding-top: 2%;
     justify-content: center;
     align-items: center;
     max-width: 50%;
@@ -65,5 +64,8 @@
     .openingImage img{
         padding: 0px;
         margin-left: 0px;
+    }
+    .about {
+        padding-top: 2%;
     }
 }

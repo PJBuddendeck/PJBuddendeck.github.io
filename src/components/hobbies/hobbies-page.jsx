@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
+import './hobbies-style.css'
 import logo from '../../images/logo.png';
 
 const HobbiesPage = () => {
@@ -48,6 +49,7 @@ const HobbiesPage = () => {
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <h1>This page is under construction!</h1>
+                    <h4>Please come back later to learn more about my personal interests and how I spend my free time.</h4>
                 </div>
             </div>
         </div>

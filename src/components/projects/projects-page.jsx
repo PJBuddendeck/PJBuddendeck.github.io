@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
+import './projects-style.css'
 import logo from '../../images/logo.png';
 
 const ProjectsPage = () => {
@@ -48,6 +49,9 @@ const ProjectsPage = () => {
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <h1>This page is under construction!</h1>
+                    <h4>Please come back later to learn more about my computer science projects.
+                        Some examples of tools I have experience with are Java, Python, C, C++, HTML, CSS, JavaScript, React, Git, GitHub, SDL2, HuggingFace, TensorFlow, SQL, and Scikit-Learn.
+                    </h4>
                 </div>
             </div>
         </div>
