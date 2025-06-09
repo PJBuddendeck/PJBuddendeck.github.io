@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
 import './about-style.css'
 import logo from '../../images/logo.png';
+import resume from '../../images/resume.pdf'
 
 const AboutPage = () => {
     const [menuOn, setMenu] = useState(false);
@@ -49,6 +50,7 @@ const AboutPage = () => {
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <h1>This page is under construction!</h1>
+                    <a href={resume} download="Peter Buddendeck Resume">Download Resume</a>
                 </div>
             </div>
         </div>
