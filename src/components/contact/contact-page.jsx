@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from "react";
 import '../style.css';
 import './contact-style.css';
 import logo from '../../images/logo.png';
+import { FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const ContactPage = () => {
     const [menuOn, setMenu] = useState(false);
@@ -65,7 +66,7 @@ const ContactPage = () => {
                 </ul>)}
                 <div id="inner-nav" className={menuOn ? "blur" : "unblur"}>
                     <ul>
-                        <li onClick={toggleMenu}><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+                        <li onClick={toggleMenu}>{<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>}</li>
                         <li className="hideNavbar"><a href="/">Home</a></li>
                         <li className="hideNavbar"><a href="/about">About</a></li>
                         <li className="hideNavbar"><a href="/projects">Projects</a></li>
@@ -96,6 +97,14 @@ const ContactPage = () => {
                                 <br /><button type="submit">Send Message</button>
                             </div>
                         </form>
+                    </div>
+                    <div id='platforms'>
+                        <h3>Additionally, you can find me on the following platforms:</h3>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/peter-buddendeck-9a538a345/" rel="noreferrer" target="_blank"><FaLinkedin /></a></li>
+                            <li><a href="https://www.instagram.com/peterb_8/" rel="noreferrer" target="_blank"><FaInstagram /></a></li>
+                            <li><a href="https://www.facebook.com/people/Peter-Buddendeck/pfbid0H8k3ujec4X9Su2eVLFPUfgqqMC59mEZqNvx9q88qi76uZCJqkmJHfgsiSbKbG1EUl/" rel="noreferrer" target="_blank"><FaFacebook /></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
