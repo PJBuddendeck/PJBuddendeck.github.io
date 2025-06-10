@@ -139,11 +139,10 @@ body {
 }
 
 #content {
-    position: fixed;
+    position: absolute;
     margin-top: 50px;
     width: 100%;
-    bottom: 0;
-    top: 0;
+    height: calc(100% - 70px);
 }
 
 #backdrop {
