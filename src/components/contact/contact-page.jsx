@@ -8,7 +8,6 @@ const ContactPage = () => {
     const [menuOn, setMenu] = useState(false);
     const [showSuccess, setSuccess] = useState(false);
     const formRef = useRef(null);
-    const succRef = useRef(null);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -43,7 +42,7 @@ const ContactPage = () => {
             <div id="content" className={menuOn ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <div id='contact-form' className="fade1">
-                        {showSuccess && (<div id='form-success' ref={succRef}>
+                        {showSuccess && (<div id='form-success'>
                             The form has been successfully submitted!
                         </div>)}
                     <h1>Contact Form</h1>

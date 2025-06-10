@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/home/home-page';
 import AboutPage from './components/about/about-page';
 import ProjectsPage from './components/projects/projects-page';
@@ -30,7 +30,7 @@ import NotFound from './components/errors/not-found'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -39,7 +39,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

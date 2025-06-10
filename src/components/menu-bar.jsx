@@ -25,10 +25,10 @@ const MenuBar = ({ menuOn, setMenu }) => {
             {menuOn && (
                 <ul ref={menuRef} className="menu">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/hobbies">Hobbies</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/projects">Projects</a></li>
+                    <li><a href="#/hobbies">Hobbies</a></li>
+                    <li><a href="#/contact">Contact</a></li>
                 </ul>
             )}
             <div id="inner-nav" className={menuOn ? "blur" : "unblur"}>
@@ -44,10 +44,10 @@ const MenuBar = ({ menuOn, setMenu }) => {
                         </svg>
                     </li>
                     <li className="hideNavbar"><a href="/">Home</a></li>
-                    <li className="hideNavbar"><a href="/about">About</a></li>
-                    <li className="hideNavbar"><a href="/projects">Projects</a></li>
-                    <li className="hideNavbar"><a href="/hobbies">Hobbies</a></li>
-                    <li className="hideNavbar"><a href="/contact">Contact</a></li>
+                    <li className="hideNavbar"><a href="#/about">About</a></li>
+                    <li className="hideNavbar"><a href="#/projects">Projects</a></li>
+                    <li className="hideNavbar"><a href="#/hobbies">Hobbies</a></li>
+                    <li className="hideNavbar"><a href="#/contact">Contact</a></li>
                 </ul>
                 <img src={logo} alt="Website logo" />
             </div>
