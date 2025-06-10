@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import '../style.css';
 import './home-style.css';
 import MenuBar from '../menu-bar';
-import photo from '../../images/photo.png';
+import photo from '../../images/photo.png'
 
 const HomePage = () => {
     const [menuOn, setMenu] = useState(false);

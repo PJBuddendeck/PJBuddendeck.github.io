@@ -1,5 +1,5 @@
 .openingImage {
-    width: auto;
+    width: fit-content;
     padding: 10px;
     margin: auto;
     display: flex;
