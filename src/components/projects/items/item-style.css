@@ -1,0 +1,87 @@
+.card {
+    background: white;
+    border-radius: 6px;
+    border-color: #222222;
+    border-width: 1.6px;
+    color: #222222;
+    padding: 1em;
+    width: 220px;
+    height: 220px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.15s;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.project-head {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #222222;
+    font-weight: bold;
+}
+
+.project-desc {
+    font-size: 0.85em;
+    color: #555555;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75em;
+    color: #888;
+    gap: 0.5em;
+    padding-top: 0.5em;
+}
+
+#icon {
+    background-color: #4571a1;
+    border-radius: 50%;
+    height: 0.6em;
+    width: 0.6em;
+    border-color: #999999;
+    color: #999999;
+    margin-top: 0.1em;
+    margin-right: 0.2em;
+}
+
+.project-language {
+    display: flex;
+    align-items: center;
+}
+
+.project-time {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 4em;
+}
+
+.table-items-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+/* Responsive: 2 per row on tablets, 1 per row on mobile */
+@media (max-width: 1100px) {
+    .table-items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .table-items-grid {
+        grid-template-columns: 1fr;
+    }
+}
