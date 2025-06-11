@@ -7,6 +7,8 @@ import TableItem from './items/table-item'
 const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
     const [projects, setProjects] = React.useState(['project1', 'project2', 'project3']);
+    const [search, setSearch] = useState("");
+    const [sort, setSort] = useState("");
 
     const handleViewProject = async (project) => {
     }
@@ -33,7 +35,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2023",
             type: "Personal"
         },
         {
@@ -41,7 +43,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Winter 2022",
             type: "Personal"
         },
         {
@@ -49,7 +51,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2021",
             type: "Personal"
         },
         {
@@ -57,7 +59,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Winter 2020",
             type: "Personal"
         },
         {
@@ -65,7 +67,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2019",
             type: "Personal"
         },
         {
@@ -73,7 +75,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Winter 2018",
             type: "Personal"
         },
         {
@@ -81,7 +83,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2017",
             type: "Personal"
         },
         {
@@ -89,7 +91,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Winter 2016",
             type: "Personal"
         },
         {
@@ -97,7 +99,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2015",
             type: "Personal"
         },
         {
@@ -105,7 +107,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "2000",
             type: "Personal"
         },
         {
@@ -113,7 +115,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Summer 2000",
             type: "Personal"
         },
         {
@@ -121,7 +123,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Winter 2000",
             type: "Personal"
         },
         {
@@ -129,7 +131,7 @@ const ProjectsPage = () => {
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
-            time: "Summer 2025",
+            time: "Spring 2000",
             type: "Personal"
         },
         {
@@ -137,7 +139,7 @@ const ProjectsPage = () => {
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
-            time: "Winter 2024",
+            time: "Autumn 2000",
             type: "Personal"
         }
     ];
@@ -159,10 +161,49 @@ const ProjectsPage = () => {
         return () => window.removeEventListener('resize', updateRowsPerPage);
     }, []);
 
-    const totalPages = Math.ceil(sampleProjects.length / rowsPerPage);
+    // Helper to parse season and year for sorting
+    const seasonOrder = { '':0, 'Spring': 1, 'Summer': 2, 'Autumn': 3, 'Winter':4 };
+    function parseTime(timeStr) {
+        if (!timeStr) return { season: 0, year: 0 };
+        const [season, year] = timeStr.split(" ");
+        return { season: seasonOrder[season] || 0, year: parseInt(year) || 0 };
+    }
+
+    // Filter projects by search
+    const filteredProjects = sampleProjects.filter(project => {
+        if (!search) return true;
+        const searchLower = search.toLowerCase();
+        return Object.values(project).some(val =>
+            String(val).toLowerCase().includes(searchLower)
+        );
+    });
+
+    // Sort projects
+    const sortedProjects = [...filteredProjects].sort((a, b) => {
+        if (sort === "name") {
+            return a.name.localeCompare(b.name);
+        } else if (sort === "language") {
+            return a.language.localeCompare(b.language);
+        } else if (sort === "time") {
+            // Most recent to oldest
+            const aTime = parseTime(a.time);
+            const bTime = parseTime(b.time);
+            if (aTime.year !== bTime.year) return bTime.year - aTime.year;
+            return bTime.season - aTime.season;
+        } else if (sort === "time2") {
+            // Oldest to most recent
+            const aTime = parseTime(a.time);
+            const bTime = parseTime(b.time);
+            if (aTime.year !== bTime.year) return aTime.year - bTime.year;
+            return aTime.season - bTime.season;
+        }
+        return 0;
+    });
+
+    const totalPages = Math.ceil(sortedProjects.length / rowsPerPage);
     const startIdx = (currentPage - 1) * rowsPerPage;
     const endIdx = startIdx + rowsPerPage;
-    const currentProjects = sampleProjects.slice(startIdx, endIdx);
+    const currentProjects = sortedProjects.slice(startIdx, endIdx);
 
     const handlePrev = () => setCurrentPage((p) => Math.max(1, p - 1));
     const handleNext = () => setCurrentPage((p) => Math.min(totalPages, p + 1));
@@ -179,12 +220,21 @@ const ProjectsPage = () => {
                     </h4>
                     <div id="project-table-container" className="fade1">
                         <div id="project-search-bar">
-                            <input type="text" placeholder="Search projects" className="project-search-input" />
-                            <select className="project-sort-select">
-                                <option value="">Sort by:</option>
+                            <input
+                                type="text"
+                                placeholder="Search projects"
+                                className="project-search-input"
+                                value={search}
+                                onChange={e => {
+                                    setSearch(e.target.value);
+                                    setCurrentPage(1);
+                                }}
+                            />
+                            <select className="project-sort-select" value={sort} onChange={e => { setSort(e.target.value); setCurrentPage(1); }}>
+                                <option value="time">Sort by:</option>
                                 <option value="name">Name</option>
                                 <option value="language">Language</option>
-                                <option value="time">Date</option>
+                                <option value="time2">Date Descending</option>
                             </select>
                         </div>
                         <div className="table-items-grid">
