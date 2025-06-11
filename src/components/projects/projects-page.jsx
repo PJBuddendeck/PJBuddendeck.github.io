@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import '../style.css';
 import './projects-style.css'
 import MenuBar from '../menu-bar';
@@ -28,8 +28,8 @@ const ProjectsPage = () => {
             time: "Winter 2024",
             type: "Personal"
         },
-                {
-            id: 1,
+        {
+            id: 3,
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
@@ -37,7 +37,7 @@ const ProjectsPage = () => {
             type: "Personal"
         },
         {
-            id: 2,
+            id: 4,
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
@@ -45,7 +45,7 @@ const ProjectsPage = () => {
             type: "Personal"
         },
         {
-            id: 1,
+            id: 5,
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
@@ -53,39 +53,7 @@ const ProjectsPage = () => {
             type: "Personal"
         },
         {
-            id: 2,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2024",
-            type: "Personal"
-        },
-                {
-            id: 1,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2025",
-            type: "Personal"
-        },
-        {
-            id: 2,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2024",
-            type: "Personal"
-        },
-                {
-            id: 1,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2025",
-            type: "Personal"
-        },
-        {
-            id: 2,
+            id: 6,
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
@@ -93,7 +61,7 @@ const ProjectsPage = () => {
             type: "Personal"
         },
         {
-            id: 1,
+            id: 7,
             name: "Personal Website",
             desc: "The website you are currently viewing, built with React and CSS.",
             language: "React",
@@ -101,7 +69,71 @@ const ProjectsPage = () => {
             type: "Personal"
         },
         {
-            id: 2,
+            id: 8,
+            name: "Stream Overlay",
+            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
+            language: "HTML",
+            time: "Winter 2024",
+            type: "Personal"
+        },
+        {
+            id: 9,
+            name: "Personal Website",
+            desc: "The website you are currently viewing, built with React and CSS.",
+            language: "React",
+            time: "Summer 2025",
+            type: "Personal"
+        },
+        {
+            id: 10,
+            name: "Stream Overlay",
+            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
+            language: "HTML",
+            time: "Winter 2024",
+            type: "Personal"
+        },
+        {
+            id: 11,
+            name: "Personal Website",
+            desc: "The website you are currently viewing, built with React and CSS.",
+            language: "React",
+            time: "Summer 2025",
+            type: "Personal"
+        },
+        {
+            id: 12,
+            name: "Stream Overlay",
+            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
+            language: "HTML",
+            time: "Winter 2024",
+            type: "Personal"
+        },
+        {
+            id: 13,
+            name: "Personal Website",
+            desc: "The website you are currently viewing, built with React and CSS.",
+            language: "React",
+            time: "Summer 2025",
+            type: "Personal"
+        },
+        {
+            id: 14,
+            name: "Stream Overlay",
+            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
+            language: "HTML",
+            time: "Winter 2024",
+            type: "Personal"
+        },
+        {
+            id: 15,
+            name: "Personal Website",
+            desc: "The website you are currently viewing, built with React and CSS.",
+            language: "React",
+            time: "Summer 2025",
+            type: "Personal"
+        },
+        {
+            id: 16,
             name: "Stream Overlay",
             desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
             language: "HTML",
@@ -109,6 +141,31 @@ const ProjectsPage = () => {
             type: "Personal"
         }
     ];
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [rowsPerPage, setRowsPerPage] = useState(16);
+
+    useEffect(() => {
+        function updateRowsPerPage() {
+            const width = window.innerWidth;
+            if (width > 1500) setRowsPerPage(16);
+            else if (width > 1100) setRowsPerPage(12);
+            else if (width > 700) setRowsPerPage(8);
+            else setRowsPerPage(4);
+            setCurrentPage(1);
+        }
+        updateRowsPerPage();
+        window.addEventListener('resize', updateRowsPerPage);
+        return () => window.removeEventListener('resize', updateRowsPerPage);
+    }, []);
+
+    const totalPages = Math.ceil(sampleProjects.length / rowsPerPage);
+    const startIdx = (currentPage - 1) * rowsPerPage;
+    const endIdx = startIdx + rowsPerPage;
+    const currentProjects = sampleProjects.slice(startIdx, endIdx);
+
+    const handlePrev = () => setCurrentPage((p) => Math.max(1, p - 1));
+    const handleNext = () => setCurrentPage((p) => Math.min(totalPages, p + 1));
 
     return (
         <div>
@@ -130,16 +187,22 @@ const ProjectsPage = () => {
                                 <option value="time">Date</option>
                             </select>
                         </div>
-                        {projects.length === 0 ? (
-                            <div className="project-table-empty">
-                                No projects available
-                            </div>
-                        ) :
                         <div className="table-items-grid">
-                            {sampleProjects.map((project) => (
-                                <TableItem key={project.id} {...project} />
-                            ))}
-                        </div>}
+                            {currentProjects.length === 0 ? (
+                                <div className="project-table-empty">No projects found.</div>
+                            ) : (
+                                currentProjects.map((project) => (
+                                    <TableItem key={project.id} {...project} />
+                                ))
+                            )}
+                        </div>
+                        {sampleProjects.length > rowsPerPage && (
+                            <div className="pagination-controls">
+                                <button onClick={handlePrev} disabled={currentPage === 1}>Prev</button>
+                                <span>Page {currentPage} of {totalPages}</span>
+                                <button onClick={handleNext} disabled={currentPage === totalPages}>Next</button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

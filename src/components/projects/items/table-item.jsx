@@ -1,10 +1,17 @@
 import React from "react";
 import './item-style.css';
 import personal from '../../../images/personal-project.png';
-import school from '../../../images/school-project.png';
+import academic from '../../../images/academic-project.png';
 
 const TableItem = ({ id, name, desc, language, time, type }) => {
-    const imgSrc = type === 'school' ? school : personal;
+    const typeToImg = {
+        Personal: personal,
+        Academic: academic,
+        // Add more types here, e.g.:
+        // Research: researchImg,
+        // Work: workImg,
+    };
+    const imgSrc = typeToImg[type] || personal;
     
     return (
         <div className="card">

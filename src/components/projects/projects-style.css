@@ -49,6 +49,24 @@ h4 {
     margin: 2em 0;
 }
 
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pagination-controls button {
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    border-color: #222222;
+    border-width: 1.6px;
+    background-color: #FFAB40;
+    color: #222222;
+    cursor: pointer;
+}
+
 @media (max-width: 1100px) {
     #project-table-container {
         min-width: 0;
