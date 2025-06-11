@@ -40,7 +40,7 @@ body {
 #navbar {
     background-image: linear-gradient(0deg, rgba(34,34,34,0), rgba(34,34,34,1) 10%);
     height: 50px;
-    top:0;
+    top: 0;
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -58,26 +58,17 @@ body {
     height: 50px;
 }
 
-#navbar a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-#navbar a:hover {
-    background-color: #555555;
-}
-
+#navbar a,
 #navbar svg {
     height: 100%;
     padding: 0 30px;
     display: flex;
     align-items: center;
+    color: white;
+    text-decoration: none;
 }
 
+#navbar a:hover,
 #navbar svg:hover {
     background-color: #555555;
 }
@@ -87,7 +78,7 @@ body {
     width: 48px;
     height: 48px;
     padding: 0 30px;
-    float:right;
+    float: right;
 }
 
 #inner-nav {
@@ -115,19 +106,15 @@ body {
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .menu li {
     width: 100%;
 }
 
-@media(max-width: 750px){
+@media (max-width: 750px) {
     .hideNavbar {
         display: none;
     }
@@ -141,7 +128,12 @@ body {
 #content {
     position: absolute;
     margin-top: 50px;
-    width: 100%;
+    left: 0;
+    right: 0;
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
 }
 
 #backdrop {
@@ -151,7 +143,9 @@ body {
     margin-left: 10vw;
     margin-right: 10vw;
     padding-top: 20px;
-    height: 100%;
+    min-height: calc(100vh - 50px);
+    height: auto;
+    box-sizing: border-box;
 }
 
 .fade1 {
@@ -168,10 +162,6 @@ body {
 }
 
 @keyframes open-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

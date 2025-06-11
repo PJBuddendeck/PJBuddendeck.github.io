@@ -34,16 +34,19 @@ body {
     padding-top: 10vh;
     padding-left: 10vw;
     padding-right: 10vw;
-    h1 {
-        font-size: 65px;
-    }
-    p {
-        padding-top: 3vh;
-        font-size: 20px;
-    }
-    a {
-        text-decoration: none;
-        color: #0097A7;
-        font-weight: bold;
-    }
+}
+
+#err-content h1 {
+    font-size: 65px;
+}
+
+#err-content p {
+    padding-top: 3vh;
+    font-size: 20px;
+}
+
+#err-content a {
+    text-decoration: none;
+    color: #0097A7;
+    font-weight: bold;
 }

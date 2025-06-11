@@ -13,8 +13,17 @@ const HomePage = () => {
             <MenuBar menuOn={menuOn} setMenu={setMenu}/>
             <div id="content" className={`fade1 ${menuOn ? "blur" : "unblur"}`}>
                 <div className="openingImage">
-                    <img className="fade1 fade2" src={photo} alt="Peter Buddendeck" width="386" height ="491px"/>
-                    <h1>P<span className="yellow-text">ositive</span><br />J<span className="yellow-text">udicious</span><br />B<span className="yellow-text">right</span></h1>
+                    <img
+                        className="fade1 fade2"
+                        src={photo}
+                        alt="Peter Buddendeck"
+                        style={{ height: "30vw", minHeight: "300px", maxHeight: "900px", maxWidth: "90vw", width: "auto" }}
+                    />
+                    <h1>
+                        P<span className="yellow-text">ositive</span><br />
+                        J<span className="yellow-text">udicious</span><br />
+                        B<span className="yellow-text">right</span>
+                    </h1>
                 </div>
                 <div className='about fade1 fade2 fade3'>
                     <p>Welcome to the official website of Peter J. Buddendeck. Thank you for visiting! Please use the navigation bar at the top of your screen to learn more about my background, interests, and experience.</p>
