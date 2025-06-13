@@ -29,118 +29,6 @@ const ProjectsPage = () => {
             language: "HTML",
             time: "Winter 2024",
             type: "Personal"
-        },
-        {
-            id: 3,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2023",
-            type: "Personal"
-        },
-        {
-            id: 4,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2022",
-            type: "Personal"
-        },
-        {
-            id: 5,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2021",
-            type: "Personal"
-        },
-        {
-            id: 6,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2020",
-            type: "Personal"
-        },
-        {
-            id: 7,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2019",
-            type: "Personal"
-        },
-        {
-            id: 8,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2018",
-            type: "Personal"
-        },
-        {
-            id: 9,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2017",
-            type: "Personal"
-        },
-        {
-            id: 10,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2016",
-            type: "Personal"
-        },
-        {
-            id: 11,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2015",
-            type: "Personal"
-        },
-        {
-            id: 12,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "2000",
-            type: "Personal"
-        },
-        {
-            id: 13,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2000",
-            type: "Personal"
-        },
-        {
-            id: 14,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2000",
-            type: "Personal"
-        },
-        {
-            id: 15,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Spring 2000",
-            type: "Personal"
-        },
-        {
-            id: 16,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Autumn 2000",
-            type: "Personal"
         }
     ];
 
@@ -242,7 +130,7 @@ const ProjectsPage = () => {
                                 <div className="project-table-empty">No projects found.</div>
                             ) : (
                                 currentProjects.map((project) => (
-                                    <TableItem key={project.id} {...project} />
+                                    <TableItem key={project.id} {...project}/>
                                 ))
                             )}
                         </div>
