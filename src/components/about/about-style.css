@@ -1,7 +1,7 @@
 #title {
     font-size: 2.8rem;
     width: 60%;
-    margin: 2rem auto 1.5rem auto;
+    margin: 0 auto 1.5rem auto;
     text-align: center;
     background-color: rgba(85, 85, 85, 0.5);
     border: 4px solid #222222;
@@ -12,26 +12,14 @@
     padding: 1rem 2vw;
 }
 
-a {
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-a:hover {
-    color: #ffcc00;
-}
-
 .about-section {
-    background: rgba(255,255,255,0.08);
+    background-color: rgba(85, 85, 85, 0.5);
     border-radius: 18px;
     margin: 1.5rem auto;
     padding: 1.2rem 2rem;
-    max-width: 700px;
+    max-width: 900px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    color: #222;
-    border: 1.5px solid #bbb;
+    border: 1.5px solid #555555;
 }
 
 .about-section h2 {
@@ -42,28 +30,37 @@ a:hover {
 }
 
 .about-section p {
-    color: #444;
+    color: white;
     font-size: 1.05em;
     margin: 0;
+    text-align: left;
+    text-indent: 3em;
 }
 
 .resume-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #222222;
+    font-weight: bold;
     display: block;
     width: fit-content;
-    margin: 2.5rem auto 0 auto;
+    margin: auto auto auto auto;
     padding: 0.7em 1.6em;
     background: #FFAB40;
-    color: #222222;
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
     border: 2px solid #222222;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    transition: background 0.2s, color 0.2s, transform 0.15s;
+    transition: 0.2s, color 0.2s, transform 0.15s;
 }
 
 .resume-link:hover {
-    background: #ffd580;
-    color: #111;
     transform: translateY(-2px) scale(1.03);
+}
+
+.about-section a {
+    text-decoration: none;
+    color: #FFAB40;
+    font-weight: bold;
 }
