@@ -3,9 +3,7 @@ import '../style.css';
 import './projects-style.css'
 import MenuBar from '../menu-bar';
 import TableItem from './items/table-item'
-import Project from './items/project';
 import projectsData from '../../data/projects.json';
-import { useParams } from 'react-router-dom';
 
 const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
