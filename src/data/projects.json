@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Personal Website",
+    "desc": "The website you are currently viewing, built with React and CSS.",
+    "language": "React",
+    "time": "Summer 2025",
+    "type": "Personal"
+  },
+  {
+    "id": 2,
+    "name": "Stream Overlay",
+    "desc": "Used for the William & Mary Smash Bros Club's Twitch streams.",
+    "language": "HTML",
+    "time": "Winter 2024",
+    "type": "Personal"
+  }
+]

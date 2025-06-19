@@ -3,34 +3,15 @@ import '../style.css';
 import './projects-style.css'
 import MenuBar from '../menu-bar';
 import TableItem from './items/table-item'
+import Project from './items/project';
+import projectsData from '../../data/projects.json';
+import { useParams } from 'react-router-dom';
 
 const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
-    const [projects, setProjects] = React.useState(['project1', 'project2', 'project3']);
+    const [projects, setProjects] = useState(projectsData);
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("");
-
-    const handleViewProject = async (project) => {
-    }
-
-    const sampleProjects = [
-        {
-            id: 1,
-            name: "Personal Website",
-            desc: "The website you are currently viewing, built with React and CSS.",
-            language: "React",
-            time: "Summer 2025",
-            type: "Personal"
-        },
-        {
-            id: 2,
-            name: "Stream Overlay",
-            desc: "Used for the William & Mary Smash Bros Club's Twitch streams.",
-            language: "HTML",
-            time: "Winter 2024",
-            type: "Personal"
-        }
-    ];
 
     const [currentPage, setCurrentPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(16);
@@ -58,7 +39,7 @@ const ProjectsPage = () => {
     }
 
     // Filter projects by search
-    const filteredProjects = sampleProjects.filter(project => {
+    const filteredProjects = projects.filter(project => {
         if (!search) return true;
         const searchLower = search.toLowerCase();
         return Object.values(project).some(val =>
@@ -134,7 +115,7 @@ const ProjectsPage = () => {
                                 ))
                             )}
                         </div>
-                        {sampleProjects.length > rowsPerPage && (
+                        {projects.length > rowsPerPage && (
                             <div className="pagination-controls">
                                 <button onClick={handlePrev} disabled={currentPage === 1}>Prev</button>
                                 <span>Page {currentPage} of {totalPages}</span>
