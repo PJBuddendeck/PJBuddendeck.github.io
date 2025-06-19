@@ -1,6 +1,6 @@
 {
   "name": "mywebsite",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://PJBuddendeck.github.io/",
   "private": true,
   "dependencies": {
