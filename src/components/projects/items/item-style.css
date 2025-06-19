@@ -13,6 +13,7 @@
     justify-content: space-between;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     transition: transform 0.15s;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -23,7 +24,6 @@
     display: flex;
     align-items: center;
     font-size: 1.1em;
-    color: #222222;
     font-weight: bold;
 }
 
@@ -72,7 +72,6 @@
     margin: 2rem 0;
 }
 
-/* Responsive: 2 per row on tablets, 1 per row on mobile */
 @media (max-width: 1500px) {
     .table-items-grid {
         grid-template-columns: repeat(3, 1fr);

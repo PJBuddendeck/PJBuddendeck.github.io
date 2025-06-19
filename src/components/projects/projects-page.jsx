@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from "react";
 import '../style.css';
-import './projects-style.css'
+import './projects-style.css';
 import MenuBar from '../menu-bar';
 import TableItem from './items/table-item'
 import projectsData from '../../data/projects.json';
 
 const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
-    const [projects, setProjects] = useState(projectsData);
+    const [projects] = useState(projectsData);
     const [search, setSearch] = useState("");
     const [sort, setSort] = useState("");
 

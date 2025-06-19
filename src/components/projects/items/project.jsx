@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import '../../style.css';
-import '../projects-style.css'
 import MenuBar from '../../menu-bar';
 import { useParams, useNavigate } from 'react-router-dom';
 import projectsData from '../../../data/projects.json';
