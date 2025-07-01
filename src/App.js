@@ -3,7 +3,6 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/home/home-page';
 import AboutPage from './components/about/about-page';
 import ProjectsPage from './components/projects/projects-page';
-import Project from './components/projects/items/project';
 import HobbiesPage from './components/hobbies/hobbies-page';
 import ContactPage from './components/contact/contact-page';
 import NotFound from './components/errors/not-found'
@@ -36,7 +35,6 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path='/projects/:id' element={<Project />} />
           <Route path="/hobbies" element={<HobbiesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

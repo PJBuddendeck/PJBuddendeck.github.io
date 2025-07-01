@@ -79,6 +79,74 @@ h4 {
     transform: translateY(-3px) scale(1.03);
 }
 
+/* Popup overlay for project details */
+.popup-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.popup-content {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    min-width: 320px;
+    max-width: 90vw;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    position: relative;
+    color: #222;
+    text-align: left;
+    animation: popupIn 0.2s;
+}
+
+@keyframes popupIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.popup-close:hover {
+    color: #FFAB40;
+}
+
+.popup-content h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.popup-content h3, .popup-content h4 {
+    margin: 0.2em 0 0.2em 0;
+    font-weight: normal;
+}
+
+.popup-content p {
+    margin-top: 1em;
+    color: #444;
+    font-size: 1.1em;
+}
+
 @media (max-width: 1100px) {
     #project-table-container {
         min-width: 0;

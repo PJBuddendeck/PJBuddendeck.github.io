@@ -1,9 +1,25 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect} from 'react';
 import '../style.css';
 import './projects-style.css';
 import MenuBar from '../menu-bar';
-import TableItem from './items/table-item'
+import TableItem from './items/table-item';
 import projectsData from '../../data/projects.json';
+
+const ProjectPopup = ({ project, onClose }) => {
+    if (!project) return null;
+    return (
+        <div className="popup-overlay" onClick={onClose}>
+            <div className="popup-content" onClick={e => e.stopPropagation()}>
+                <button className="popup-close" onClick={onClose}>&times;</button>
+                <h1>{project.name}</h1>
+                <h3>Language: {project.language}</h3>
+                <h4>Type: {project.type}</h4>
+                <h4>Date: {project.time}</h4>
+                <p>{project.desc}</p>
+            </div>
+        </div>
+    );
+};
 
 const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
@@ -13,6 +29,7 @@ const ProjectsPage = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(16);
+    const [popupProject, setPopupProject] = useState(null);
 
     useEffect(() => {
         function updateRowsPerPage() {
@@ -77,9 +94,9 @@ const ProjectsPage = () => {
 
     return (
         <div>
-            <div id="background" className={menuOn ? "blur" : "unblur"}></div>
+            <div id="background" className={menuOn || popupProject ? "blur" : "unblur"}></div>
             <MenuBar menuOn={menuOn} setMenu={setMenu}/>
-            <div id="content" className={menuOn ? "blur" : "unblur"}>
+            <div id="content" className={menuOn || popupProject ? "blur" : "unblur"}>
                 <div id="backdrop">
                     <h1>This page is under construction!</h1>
                     <h4>Please come back later to learn more about my computer science projects.
@@ -109,7 +126,7 @@ const ProjectsPage = () => {
                                 <div className="project-table-empty">No projects found.</div>
                             ) : (
                                 currentProjects.map((project) => (
-                                    <TableItem key={project.id} {...project}/>
+                                    <TableItem key={project.id} {...project} onClick={() => setPopupProject(project)} />
                                 ))
                             )}
                         </div>
@@ -123,6 +140,7 @@ const ProjectsPage = () => {
                     </div>
                 </div>
             </div>
+            <ProjectPopup project={popupProject} onClose={() => setPopupProject(null)} />
         </div>
     );
 };
