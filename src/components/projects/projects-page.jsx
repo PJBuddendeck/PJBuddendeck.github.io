@@ -25,7 +25,7 @@ const ProjectsPage = () => {
     const [menuOn, setMenu] = useState(false);
     const [projects] = useState(projectsData);
     const [search, setSearch] = useState("");
-    const [sort, setSort] = useState("");
+    const [sort, setSort] = useState("time");
 
     const [currentPage, setCurrentPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(16);

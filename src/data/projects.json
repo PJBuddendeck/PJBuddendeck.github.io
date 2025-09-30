@@ -14,5 +14,21 @@
     "language": "HTML",
     "time": "Winter 2024",
     "type": "Personal"
+  },
+  {
+    "id": 3,
+    "name": "Kill Alien Game",
+    "desc": "A group project created using the SDL2 library for CSCI 437 Game Design",
+    "language": "C++",
+    "time": "Spring 2025",
+    "type": "Academic"
+  },
+  {
+    "id": 4,
+    "name": "AST Aligner",
+    "desc": "PyPI library and frontend tool, group project for CSCI 435 Software Engineering.",
+    "language": "Python",
+    "time": "Autumn 2024",
+    "type": "Academic"
   }
 ]
