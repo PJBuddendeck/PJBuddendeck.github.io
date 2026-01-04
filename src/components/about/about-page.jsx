@@ -97,6 +97,22 @@ const AboutPage = () => {
                         </p>
                         <br />
                         <p>
+                            After my graduation in May of 2025, I took on a part-time role at a PC gaming center close to home. In this position, I was
+                            the sole staff member in the store at all times, which taught me a great deal about responsibility and independent problem-solving
+                            in a working environment. I was responsible for assisting customers with their purchases, maintaining the cleanliness and organization
+                            of the store, and troubleshooting any technical issues that arose with the gaming PCs. This role required me to think on my feet and
+                            handle a variety of tasks simultaneously, which greatly improved my multitasking and communication skills. Unfortunately, due to experiences
+                            with upper management that conflicted with my personal values, I decided to leave this position after a few months.
+                        </p>
+                        <br />
+                        <p>
+                            In Autumn of 2025, I began working as an After-School STEM Instructor with Play-Well TEKnologies, where I teach elementary and middle school
+                            students about fundamental engineering concepts using LEGO materials. This role has been incredibly rewarding, as I get to inspire young minds
+                            and foster their interest in STEM fields. It has also helped me develop my public speaking skills and ability to explain complex concepts in an 
+                            accessible manner, which I believe will be beneficial in any future career path I choose to pursue.
+                        </p>
+                        <br />
+                        <p>
                             While I have not yet had the opportunity to work in a formal computer science role, I look forward to doing so in the future.
                             For now, I continue to work on personal projects in order to develop my skills and gain experience in the field. Please take a
                             look at my <a href="#/projects">projects</a> page to view some of the computer science projects I have worked on.
