@@ -118,7 +118,7 @@ const ProjectsPage = () => {
                                 <option value="time">Sort by:</option>
                                 <option value="name">Name</option>
                                 <option value="language">Language</option>
-                                <option value="time2">Date Descending</option>
+                                <option value="time2">Oldest First</option>
                             </select>
                         </div>
                         <div className="table-items-grid">
