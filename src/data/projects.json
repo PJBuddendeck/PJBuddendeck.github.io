@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Kill Alien Game",
-    "desc": "A group project created using the SDL2 library for CSCI 437 Game Design",
+    "desc": "A group project created using the SDL2 library for CSCI 437 Game Design.",
     "language": "C++",
     "time": "Spring 2025",
     "type": "Academic"
@@ -42,7 +42,7 @@
   {
     "id": 6,
     "name": "Packet Analysis",
-    "desc": "Classification of network packets for CSCI 434 Network Systems & Design",
+    "desc": "Classification of network packets for CSCI 434 Network Systems & Design.",
     "language": "Python",
     "time": "Spring 2024",
     "type": "Academic"
@@ -50,7 +50,7 @@
   {
     "id": 7,
     "name": "Maze Navigaton",
-    "desc": "A maze game built for Android devices for CSCI 301 Software Development",
+    "desc": "A maze game built for Android devices for CSCI 301 Software Development.",
     "language": "Java",
     "time": "Fall 2022",
     "type": "Academic"
@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "XML Node Parser",
-    "desc": "Draws rectangles on website image based on XML nodes for CSCI 435 Software Engineering",
+    "desc": "Draws rectangles on screenshot based on XML nodes for CSCI 435 Software Engineering.",
     "language": "Python",
     "time": "Autumn 2024",
     "type": "Academic"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "MouseCam",
-    "desc": "A simple program that uses OpenCV to track a mouse cursor and display it on the screen.",
+    "desc": "A simple program that lets you control your mouse with hand motions.",
     "language": "Python",
     "time": "Spring 2026",
     "type": "Personal"
