@@ -58,7 +58,7 @@
   {
     "id": 8,
     "name": "XML Node Parser",
-    "desc": "Draws rectangles on screenshot based on XML nodes for CSCI 435 Software Engineering.",
+    "desc": "Draws rectangles on web image based on XML nodes for CSCI 435 Software Engineering.",
     "language": "Python",
     "time": "Autumn 2024",
     "type": "Academic"
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "name": "MouseCam",
-    "desc": "A simple program that lets you control your mouse with hand motions.",
+    "desc": "A simple program that lets users control their mouse with hand motions.",
     "language": "Python",
     "time": "Spring 2026",
     "type": "Personal"
